@@ -37,4 +37,21 @@
 #findname{
   width: 45%;
 }
-  
+.modal-content{
+  width: 150% !important;
+  margin-left: -24% !important
+}
+.modal-header{
+  color: white;
+    background-color: cornflowerblue;
+    padding: 0rem 1rem;
+}
+.close{
+  color:white
+}
+.alert{
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}

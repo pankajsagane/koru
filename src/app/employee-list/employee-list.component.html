@@ -1,62 +1,88 @@
-<div class="row container-fluid" style="margin-top: 1%">
-<div class="col-md-8 mycontent-left">
-  <span>
-    <label>Find</label>&nbsp;&nbsp;
-    <input type="text" id="findname" placeholder="Type name & press Enter" name="find" [(ngModel)]="inputdata" (keyup.enter)="filter()">
-  </span>
-  <span class="float-right">
-    <button type="button" id="btn-delete"(click)="deleteSelected()">Delete</button>
-  </span>
- 
-<table id="customers">
-  <thead>
-    <tr>
-    <th><input type="checkbox"></th>
-    <th>Name</th>
-    <th>Discription</th>
-    <th>Web Reference</th>
-   </tr>
-  </thead>
-  <tbody>  
-  <tr *ngFor="let list of empList.data; let i = index;"> 
-    
-    <td><input type="checkbox" data-md-icheck  #checkdelet id="{{list.id}}" name="deletecheck" value="{{list.id}}" (click)="selectID(list.id,$event)"></td>
-    <td>{{list.name}}</td>
-    <td>{{list.description}}</td>
-    <td>{{list.webReference}}</td>
-  </tr>
-</tbody>  
-</table>
-</div>
 
-<div class="col-md-4">
-  <form #form="ngForm" (ngSubmit)="adduser(form)" >
- <table>
-  <tr class="rowiheight">
-  <td ><label> Name </label></td>
-  <td colspan="2"> <input type="text" class="input" name="name" #uname="ngModel" 
-    pattern="[a-zA-Z ]*" ngModel required > </td>
-    <td ></td>
-</tr>
-<tr  class="rowiheight">
-  <td><label> Discription &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; </label></td>
-  <td > <input type="text"  class="input" name="description" #uname="ngModel" 
-    pattern="[a-zA-Z ]*" ngModel required> </td>
-    <td colspan="2"></td>
-</tr>
 
-<tr  class="rowiheight">
-  <td><label> Web Ref. </label></td>
-  <td > <input type="text" class="input" name="webReference" #uname="ngModel" 
-    pattern="[a-zA-Z ]*" ngModel required> </td>
-    <td colspan="2" ></td>
-</tr>  
-<tr  class="rowiheight">
-  <td></td>
-  <td> <button type="submit" id="btn-add"class="float-right" [disabled]="form.invalid"> Add</button></td>
-</tr>
-</table>
-</form>
-</div>
-</div>
+<button type="button" class="btn btn-primary alert" data-toggle="modal" data-target=".bd-example-modal-lg">Open Alert</button>
 
+<div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Alert</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+
+      <div class="modal-body">
+      <div class="row container-fluid" style="margin-top: 1%">
+        <div class="col-md-8 mycontent-left">
+          <span>
+            <label>Find</label>&nbsp;&nbsp;
+            <input type="text" id="findname" placeholder="Type name & press Enter" name="find" [(ngModel)]="inputdata" (keyup.enter)="filter()">
+          </span>
+          <span class="float-right">
+            <button type="button" id="btn-delete"(click)="deleteSelected()">Delete</button>
+          </span>
+         
+        <table id="customers">
+          <thead>
+            <tr>
+            <th><input type="checkbox"></th>
+            <th>Name</th>
+            <th>Discription</th>
+            <th>Web Reference</th>
+           </tr>
+          </thead>
+          <tbody>  
+          <tr *ngFor="let list of empList.data; let i = index;"> 
+            
+            <td><input type="checkbox" data-md-icheck  #checkdelet id="{{list.id}}" name="deletecheck" value="{{list.id}}" (click)="selectID(list.id,$event)"></td>
+            <td>{{list.name}}</td>
+            <td>{{list.description}}</td>
+            <td>{{list.webReference}}</td>
+          </tr>
+        </tbody>  
+        </table>
+        </div>
+        
+        <div class="col-md-4">
+          <form #form="ngForm" (ngSubmit)="adduser(form)" >
+          <table>
+          <tr class="rowiheight">
+          <td><label> Name</label></td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <td> <input type="text" class="input" name="name" #uname="ngModel" 
+            pattern="[a-zA-Z ]*" ngModel required >   
+          </td>  
+          </tr>
+        
+        <tr  class="rowiheight">
+          <td><label> Discription  </label></td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <td > <input type="text"  class="input" name="description"  #disc="ngModel"
+            pattern="[a-zA-Z ]*" ngModel required> </td> 
+         
+        </tr>
+
+        <tr  class="rowiheight">
+          <td><label> Web Ref. </label></td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <td > <input type="text" class="input" name="webReference" #ref="ngModel"
+            pattern="[a-zA-Z ]*" ngModel required> </td>
+        </tr>  
+        <tr class="rowiheight">
+          <td></td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <td> <button type="submit" id="btn-add" class="float-right" [disabled]="form.invalid"> Add</button></td>
+        </tr>
+        </table>
+        </form>
+        </div>
+        </div>
+      </div>
+
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+        <button type="button" class="btn btn-primary">Ok</button>
+      </div>
+
+
+
+    </div>
+  </div>
+</div> 
