@@ -1,0 +1,40 @@
+#customers {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    font-size: 80%;
+  }
+  
+  #customers td, #customers th {
+    border: 1px solid #ddd;
+    padding: 8px;
+  }
+  .rowiheight{
+    height: 42px;
+  }
+   
+  #customers tr:hover {background-color: #ddd;}
+  
+  #customers th {
+   
+    text-align: left;
+    background-color:rgb(232, 240, 254);
+    color: black;
+  }
+  .mycontent-left {
+    border-right: 1px solid gray;
+  }
+  .input{
+    width: 270px;
+  }
+  #btn-add{
+    width: 27%;
+  }
+  #btn-delete{
+    width: 121% !important;
+    margin-left: -20%;
+}
+#findname{
+  width: 45%;
+}
+  
